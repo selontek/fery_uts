@@ -76,6 +76,9 @@ class KerjaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $kerja = Kerja::find($id);
+        $kerja->delete();
+
+        return redirect('/kerja');
     }
 }

@@ -52,7 +52,7 @@
                                       </div>
                                       <div class="modal-footer justify-content-between">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                                        <form action="/belanja/{{$item->id}}" method="POST">
+                                        <form action="/kerja/{{$item->id}}" method="POST">
                                           @method('DELETE')
                                           @csrf
                                           <button type="submit" class="btn btn-primary">Hapus</button>
