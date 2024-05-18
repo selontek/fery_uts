@@ -52,7 +52,8 @@ class KerjaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $kerja = Kerja::find($id);
+        return view('kerja.edit',compact('kerja'));
     }
 
     /**
@@ -60,7 +61,14 @@ class KerjaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $kerja = Kerja::find($id);
+
+        $kerja->kegiatan = $request->kegiatan;
+        $kerja->anggaran = $request->anggaran;
+        $kerja->tgl = $request->tgl;
+        $kerja->save();
+
+        return redirect('/kerja');
     }
 
     /**

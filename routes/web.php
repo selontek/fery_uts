@@ -41,6 +41,8 @@ Route::delete('/belanja/{id}', [BelanjaController::class, 'destroy'])->middlewar
 Route::get('/kerja', [KerjaController::class, 'index'])->middleware('auth');
 Route::get('/kerja/form/', [KerjaController::class, 'create'])->middleware('auth');
 Route::post('/kerja/store/', [KerjaController::class, 'store'])->middleware('auth');
+Route::get('/kerja/edit/{id}', [KerjaController::class, 'edit'])->middleware('auth');
+Route::put('/kerja/{id}', [KerjaController::class, 'update'])->middleware('auth');
 
 
 
