@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DesaController;
+use App\Http\Controllers\BelanjaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Manajemen Dana Desa
 Route::get('/danadesa', [DesaController::class, 'index'])->middleware('auth');
 Route::get('/danadesa/form/', [DesaController::class, 'create'])->middleware('auth');
 Route::post('/danadesa/store/', [DesaController::class, 'store'])->middleware('auth');
 Route::get('/danadesa/edit/{id}', [DesaController::class, 'edit'])->middleware('auth');
 Route::put('/danadesa/{id}', [DesaController::class, 'update'])->middleware('auth');
 Route::delete('/danadesa/{id}', [DesaController::class, 'destroy'])->middleware('auth');
+
+// Manajemen Belanja
+Route::get('/belanja', [BelanjaController::class, 'index'])->middleware('auth');
+Route::get('/belanja/form/', [BelanjaController::class, 'create'])->middleware('auth');
+Route::post('/belanja/store/', [BelanjaController::class, 'store'])->middleware('auth');
+
+
 
 
 Route::middleware('auth')->group(function () {

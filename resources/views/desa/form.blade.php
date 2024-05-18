@@ -11,7 +11,7 @@
             <h6 class="m-0 font-weight-bold text-primary">Tambah Dana Desa</h6>
         </div>
         <div class="card-body">
-          <form method="post" action="/jurusan/store/">
+          <form method="post" action="/danadesa/store/">
             @csrf
             <div class="mb-3">
                 <label class="form-label">KODE</label>
