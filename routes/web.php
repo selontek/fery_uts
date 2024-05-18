@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DesaController;
 use App\Http\Controllers\BelanjaController;
+use App\Http\Controllers\KerjaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,12 @@ Route::post('/belanja/store/', [BelanjaController::class, 'store'])->middleware(
 Route::get('/belanja/edit/{id}', [BelanjaController::class, 'edit'])->middleware('auth');
 Route::put('/belanja/{id}', [BelanjaController::class, 'update'])->middleware('auth');
 Route::delete('/belanja/{id}', [BelanjaController::class, 'destroy'])->middleware('auth');
+
+// Manajemen Belanja
+Route::get('/kerja', [KerjaController::class, 'index'])->middleware('auth');
+Route::get('/kerja/form/', [KerjaController::class, 'create'])->middleware('auth');
+Route::post('/kerja/store/', [KerjaController::class, 'store'])->middleware('auth');
+
 
 
 

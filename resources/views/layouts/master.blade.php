@@ -54,9 +54,9 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                <a class="nav-link" href="/kerja">
+                    <i class="fas fa-fw fa-building"></i>
+                    <span>Rancangan Kerja</span></a>
             </li>
 
         </ul>
