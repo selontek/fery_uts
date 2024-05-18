@@ -33,7 +33,7 @@
                             <td>{{$item->harga}}</td>
                             <td>{{ \Carbon\Carbon::parse($item->tgl)->format('d M Y') }}</td>
                             <td style="text-align: center">
-                                <a href="/danadesa/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
+                                <a href="/belanja/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
         
                                 <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
                                   hapus

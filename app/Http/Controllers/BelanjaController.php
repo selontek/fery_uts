@@ -52,7 +52,8 @@ class BelanjaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $belanja = Belanja::find($id);
+        return view('belanja.edit',compact('belanja'));
     }
 
     /**
@@ -60,7 +61,14 @@ class BelanjaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $belanja = Belanja::find($id);
+
+        $belanja->barang = $request->barang;
+        $belanja->harga = $request->harga;
+        $belanja->tgl = $request->tgl;
+        $belanja->save();
+
+        return redirect('/belanja');
     }
 
     /**
