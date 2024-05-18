@@ -32,6 +32,7 @@ Route::delete('/danadesa/{id}', [DesaController::class, 'destroy'])->middleware(
 Route::get('/belanja', [BelanjaController::class, 'index'])->middleware('auth');
 Route::get('/belanja/form/', [BelanjaController::class, 'create'])->middleware('auth');
 Route::post('/belanja/store/', [BelanjaController::class, 'store'])->middleware('auth');
+Route::delete('/belanja/{id}', [BelanjaController::class, 'destroy'])->middleware('auth');
 
 
 

@@ -68,6 +68,9 @@ class BelanjaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $belanja = Belanja::find($id);
+        $belanja->delete();
+
+        return redirect('/belanja');
     }
 }
